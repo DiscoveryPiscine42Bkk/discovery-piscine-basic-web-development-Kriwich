@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explode this balloon</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #balloon {
+            width: 200px;
+            height: 200px;
+            background-color: red; /* Initial color */
+            border-radius: 50%; /* Make it perfectly round */
+            cursor: pointer;
+            transition: background-color 0.2s ease, width 0.2s ease, height 0.2s ease; /* Smooth transitions */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="balloon"></div>
+
+    <script>
+        const balloon = document.getElementById('balloon');
+        let currentSize = 200; // Initial size
+        const colors = ['red', 'green', 'blue'];
+        let currentColorIndex = 0; // Index for current color
+
+        // Function to update balloon size and color
+        function updateBalloon(newSize, newColorIndex) {
+            balloon.style.width = newSize + 'px';
+            balloon.style.height = newSize + 'px';
+            balloon.style.backgroundColor = colors[newColorIndex];
+            currentSize = newSize;
+            currentColorIndex = newColorIndex;
+        }
+
+        // Click event listener
+        balloon.addEventListener('click', function() {
+            let newSize = currentSize + 10;
+            let newColorIndex = (currentColorIndex + 1) % colors.length; // Cycle through colors
+
+            if (newSize > 420) {
+                // Explode condition
+                newSize = 200; // Reset size
+                newColorIndex = 0; // Reset color to red
+            }
+            updateBalloon(newSize, newColorIndex);
+        });
+
+        // Mouse leave event listener
+        balloon.addEventListener('mouseleave', function() {
+            let newSize = currentSize - 5;
+            
+            // Ensure size doesn't go below 200px
+            if (newSize < 200) {
+                newSize = 200;
+            }
+
+            let newColorIndex = (currentColorIndex - 1 + colors.length) % colors.length; // Cycle colors in reverse
+
+            updateBalloon(newSize, newColorIndex);
+        });
+
+        // Initialize balloon state (though already set by CSS and initial variables)
+        updateBalloon(currentSize, currentColorIndex);
+
+    </script>
+</body>
+</html>
