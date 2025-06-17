@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title> <style>
+        body {
+            background-color: #FFC0CB; /* A shade of pink (light pink) */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 4em;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .shop-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+        .shop-item {
+            text-align: center;
+        }
+        .shop-item img {
+            max-width: 200px;
+            height: auto;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
+        }
+        .shop-item img:hover {
+            transform: scale(1.05);
+        }
+        .shop-item a {
+            display: block;
+            margin-top: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s ease-in-out;
+        }
+        .shop-item a:hover {
+            color: #f0f0f0;
+        }
+        hr {
+            width: 80%;
+            border: 0;
+            height: 2px;
+            background-color: white;
+            margin: 50px 0;
+        }
+        .footer-copyright {
+            width: 100%;
+            text-align: right;
+            font-style: italic;
+            font-family: monospace;
+            color: #555;
+            padding-right: 20px;
+            margin-top: auto;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shoping UWU! &hearts;</h1>
+    <div class="shop-container">
+        <div class="shop-item">
+            <a href="https://shopee.co.th/" target="_blank">
+                <img src="https://dl.memuplay.com/new_market/img/com.shopee.th.icon.2025-05-27-00-20-03.png" alt="Online Shop 1">
+                Shopee
+            </a>
+        </div>
+        <div class="shop-item">
+            <a href="https://www.lazada.co.th/" target="_blank">
+                <img src="https://img.lazcdn.com/g/tps/images/ims-web/TB1KB2laMFY.1VjSZFnXXcFHXXa.png" alt="Online Shop 2">
+                Lazada
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-copyright">
+        &copy; ksudjarr2025
+    </div>
+</body>
+</html>
