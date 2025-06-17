@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab</title>
+    <style>
+        /* Optional: Basic styling for the table to make it more visible */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f0f0f0; /* Light gray background for contrast */
+        }
+        table {
+            border-collapse: collapse; /* Removes space between table cells */
+            width: 60%; /* Make the table take up some width */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        td {
+            padding: 40px; /* More padding for bigger cells */
+            text-align: center;
+            font-size: 1.5em; /* Larger text */
+            font-weight: bold;
+            border: 1px solid #ccc; /* Add a border to cells */
+        }
+        /* Specific colors for each cell */
+        td:first-child { /* Targets the first <td> in the row */
+            background-color: lightgreen;
+            color: #333;
+        }
+        td:last-child { /* Targets the last <td> in the row */
+            background-color: lightcoral;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>หนึ่ง ลุงเอ</td>
+            <td>สอง ลุงเอ</td>
+        </tr>
+    </table>
+
+</body>
+</html>
