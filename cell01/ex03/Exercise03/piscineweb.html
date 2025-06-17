@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piscine Web</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* จัดเรียงรายการในแนวตั้ง */
+            justify-content: flex-start; /* เริ่มเนื้อหาจากด้านบน */
+            align-items: center; /* จัดกึ่งกลางในแนวนอน */
+            min-height: 100vh; /* กำหนดให้ body มีความสูงอย่างน้อยเท่ากับความสูงของ viewport */
+            margin: 0; /* ลบ margin เริ่มต้นของ body */
+            padding: 20px; /* เพิ่มระยะห่างรอบเนื้อหา */
+            box-sizing: border-box; /* รวม padding เข้าไปในความกว้างและความสูงทั้งหมดของ element */
+            font-family: sans-serif; /* เพิ่ม font ที่อ่านง่าย */
+        }
+        h1 {
+            font-size: 3em; /* ทำให้ตัวอักษรใหญ่กว่า h1 เริ่มต้น */
+            text-align: center; /* จัดข้อความภายใน h1 ให้อยู่กึ่งกลาง */
+            margin-bottom: 30px; /* เพิ่มช่องว่างใต้ชื่อเรื่อง */
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap; /* อนุญาตให้รูปภาพขึ้นบรรทัดใหม่ได้หากจำเป็น */
+            justify-content: center; /* จัดกึ่งกลางรูปภาพภายใน container */
+            gap: 20px; /* ระยะห่างระหว่างรูปภาพ */
+            margin-top: 20px; /* ระยะห่างเหนือรูปภาพ */
+        }
+        img {
+            max-width: 45%; /* ทำให้รูปภาพกินพื้นที่เกือบครึ่งหนึ่งของความกว้างของ container */
+            height: auto; /* รักษาสัดส่วนของรูปภาพ */
+            border: 1px solid #ddd; /* ไม่บังคับ: เพิ่มเส้นขอบบางๆ */
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* ไม่บังคับ: เพิ่มเงาจางๆ */
+            /* Optional: Add transition for hover effect on images when they are links */
+            transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        }
+        /* Optional: Add hover effect for clickable images */
+        .image-container a:hover img {
+            transform: scale(1.03); /* Slightly enlarge image on hover */
+            border-color: #007bff; /* Change border color on hover */
+        }
+        .caption {
+            text-align: center;
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Piscine Web</h1>
+
+    <p class="caption">ฮั่นเเน่</p>
+
+    <div class="image-container">
+        <a href="https://www.youtube.com/watch?v=INscMGmhmX4" target="_blank">
+            <img src="https://thehowler.org/wp-content/uploads/2018/01/roll-safe-meme-1.jpg" alt="รูปภาพมีมรูปที่ 1">
+        </a>
+
+        <img src="https://images.gamebanana.com/img/ss/mods/66ae16a9123cc.jpg" alt="รูปภาพมีมรูปที่ 2">
+    </div>
+
+    <p class="caption">ภาพประกอบ</p>
+
+</body>
+</html>
