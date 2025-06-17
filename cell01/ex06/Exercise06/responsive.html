@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Table</title>
+    <style>
+        /* Essential for full page coverage and proper sizing */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Ensures html and body take full viewport height */
+            box-sizing: border-box; /* Includes padding/border in element's total width/height */
+            font-family: sans-serif;
+            overflow: hidden; /* Prevent scrollbars if not needed, for full coverage */
+        }
+
+        body {
+            display: flex;
+            justify-content: center; /* Center the table horizontally */
+            align-items: center; /* Center the table vertically */
+            background-color: #f0f0f0; /* Light gray background for contrast */
+        }
+
+        table {
+            border-collapse: collapse; /* Removes space between table cells */
+            width: 100vw; /* Table covers 100% of the viewport width */
+            height: 100vh; /* Table covers 100% of the viewport height */
+            /* Removed box-shadow from here to avoid issues with full coverage */
+        }
+
+        tr {
+            height: 100%; /* Ensure the row takes full height of the table */
+        }
+
+        td {
+            padding: 20px; /* Adjust padding as needed */
+            text-align: center;
+            font-size: 2em; /* Larger text for visibility */
+            font-weight: bold;
+            border: 1px solid #ccc; /* Add a border to cells */
+            width: 50%; /* Each cell takes exactly half the table width */
+            box-sizing: border-box; /* Crucial for padding/border not to add to width */
+            /* Ensure text is vertically and horizontally centered within cell */
+            display: table-cell; /* Maintain table-cell behavior */
+            vertical-align: middle;
+            white-space: nowrap; /* Prevent text from wrapping too early */
+            overflow: hidden; /* Hide overflow if text is too long */
+            text-overflow: ellipsis; /* Add ellipsis if text is cut */
+        }
+
+        /* Specific colors for each cell, copied from ex05 */
+        td:first-child { /* Targets the first <td> in the row */
+            background-color: lightgreen;
+            color: #333;
+        }
+        td:last-child { /* Targets the last <td> in the row */
+            background-color: lightcoral;
+            color: #333;
+        }
+
+        /* Adjust font size on smaller screens for better readability */
+        @media (max-width: 600px) {
+            td {
+                font-size: 1.2em;
+                padding: 10px;
+            }
+        }
+        @media (max-width: 400px) {
+            td {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>หนึ่ง ลุงเอ</td>
+            <td>สอง ลุงเอ</td>
+        </tr>
+    </table>
+
+</body>
+</html>
