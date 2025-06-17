@@ -3,36 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piscine Web Exercise 02</title>
+    <title>Piscine Web</title>
     <style>
         body {
-            /* Keep the centering styles from Ex01, but adjust for content below the title */
             display: flex;
-            flex-direction: column; /* Arrange items vertically */
-            justify-content: flex-start; /* Start content from the top */
-            align-items: center; /* Center horizontally */
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px; /* Add some padding around the content */
-            box-sizing: border-box; /* Include padding in element's total width and height */
+            flex-direction: column; /* จัดเรียงรายการในแนวตั้ง */
+            justify-content: flex-start; /* เริ่มเนื้อหาจากด้านบน */
+            align-items: center; /* จัดกึ่งกลางในแนวนอน */
+            min-height: 100vh; /* กำหนดให้ body มีความสูงอย่างน้อยเท่ากับความสูงของ viewport */
+            margin: 0; /* ลบ margin เริ่มต้นของ body */
+            padding: 20px; /* เพิ่มระยะห่างรอบเนื้อหา */
+            box-sizing: border-box; /* รวม padding เข้าไปในความกว้างและความสูงทั้งหมดของ element */
+            font-family: sans-serif; /* เพิ่ม font ที่อ่านง่าย */
         }
         h1 {
-            font-size: 3em;
-            text-align: center;
-            margin-bottom: 30px; /* Add space below the title */
+            font-size: 3em; /* ทำให้ตัวอักษรใหญ่กว่า h1 เริ่มต้น */
+            text-align: center; /* จัดข้อความภายใน h1 ให้อยู่กึ่งกลาง */
+            margin-bottom: 30px; /* เพิ่มช่องว่างใต้ชื่อเรื่อง */
         }
         .image-container {
             display: flex;
-            flex-wrap: wrap; /* Allow images to wrap to the next line if needed */
-            justify-content: center; /* Center images within their container */
-            gap: 20px; /* Space between images */
-            margin-top: 20px; /* Space above images */
+            flex-wrap: wrap; /* อนุญาตให้รูปภาพขึ้นบรรทัดใหม่ได้หากจำเป็น */
+            justify-content: center; /* จัดกึ่งกลางรูปภาพภายใน container */
+            gap: 20px; /* ระยะห่างระหว่างรูปภาพ */
+            margin-top: 20px; /* ระยะห่างเหนือรูปภาพ */
         }
         img {
-            max-width: 45%; /* Make images take up almost half the width of their container */
-            height: auto; /* Maintain aspect ratio */
-            border: 1px solid #ddd; /* Optional: Add a light border */
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Optional: Add a subtle shadow */
+            max-width: 45%; /* ทำให้รูปภาพกินพื้นที่เกือบครึ่งหนึ่งของความกว้างของ container */
+            height: auto; /* รักษาสัดส่วนของรูปภาพ */
+            border: 1px solid #ddd; /* ไม่บังคับ: เพิ่มเส้นขอบบางๆ */
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* ไม่บังคับ: เพิ่มเงาจางๆ */
         }
         .caption {
             text-align: center;
@@ -45,14 +45,15 @@
 <body>
     <h1>Piscine Web</h1>
 
-    <p class="caption">Programmers while reviewing the codes</p>
+    <p class="caption">ตัวอย่างรูปภาพมีม</p>
 
     <div class="image-container">
-        <img src="https://thehowler.org/wp-content/uploads/2018/01/roll-safe-meme-1.jpg">
-        <img src="https://images.gamebanana.com/img/ss/mods/66ae16a9123cc.jpg">
+        <img src="https://thehowler.org/wp-content/uploads/2018/01/roll-safe-meme-1.jpg" alt="รูปภาพมีมรูปที่ 1">
+
+        <img src="https://images.gamebanana.com/img/ss/mods/66ae16a9123cc.jpg" alt="รูปภาพมีมรูปที่ 2">
     </div>
 
-    <p class="caption">Figure IV.1: Ex02</p>
+    <p class="caption">ภาพประกอบ</p>
 
 </body>
 </html>
