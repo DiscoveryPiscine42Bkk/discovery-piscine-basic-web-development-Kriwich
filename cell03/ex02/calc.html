@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .calculator-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input[type="text"], select, input[type="submit"] {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator-container">
+        <input type="text" id="num1" placeholder="Left number">
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="num2" placeholder="Right number">
+        <input type="submit" value="Try me!" id="calculateBtn">
+    </div>
+
+    <script>
+        document.getElementById('calculateBtn').addEventListener('click', function() {
+            const num1Input = document.getElementById('num1').value;
+            const num2Input = document.getElementById('num2').value;
+            const operator = document.getElementById('operator').value;
+
+            // Convert inputs to numbers
+            const num1 = parseInt(num1Input);
+            const num2 = parseInt(num2Input);
+
+            // 1. Validate inputs (positive integers >= 0)
+            if (isNaN(num1) || isNaN(num2) || num1 < 0 || num2 < 0) {
+                alert('Error :(');
+                console.log('Error :(');
+                return; // Stop execution if inputs are invalid
+            }
+
+            let result;
+            let errorMessage = '';
+
+            // 2. Perform calculation
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 === 0) {
+                        errorMessage = "It's over 9000!";
+                    } else {
+                        result = num1 / num2;
+                    }
+                    break;
+                case '%':
+                    if (num2 === 0) {
+                        errorMessage = "It's over 9000!";
+                    } else {
+                        result = num1 % num2;
+                    }
+                    break;
+                default:
+                    errorMessage = "Error :("; // Should not happen with current select options
+            }
+
+            // 3. Display result or error
+            if (errorMessage) {
+                alert(errorMessage);
+                console.log(errorMessage);
+            } else {
+                alert('Result: ' + result);
+                console.log('Result: ' + result);
+            }
+        });
+
+        // 4. Alert pop-up every 30 seconds
+        setInterval(function() {
+            alert('Please, use me...');
+        }, 30000); // 30000 milliseconds = 30 seconds
+    </script>
+</body>
+</html>
