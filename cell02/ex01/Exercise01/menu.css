@@ -1,0 +1,84 @@
+/* General resets and body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-nav {
+    background-color: #333; /* Dark background for the menu bar */
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.main-nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arrange main menu items horizontally */
+    justify-content: center; /* Center the menu items */
+}
+
+.main-nav ul li {
+    position: relative; /* Crucial for positioning the dropdown */
+}
+
+.main-nav ul li a {
+    display: block; /* Make the entire link area clickable */
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none; /* Remove underline */
+    text-align: center;
+    white-space: nowrap; /* Prevent menu items from wrapping */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.main-nav ul li a:hover {
+    background-color: #555; /* Darker on hover */
+}
+
+/* Dropdown menu styling */
+.main-nav .dropdown {
+    display: none; /* Hide dropdowns by default */
+    position: absolute; /* Position relative to the parent li */
+    top: 100%; /* Place directly below the parent li */
+    left: 0;
+    background-color: #444; /* Slightly different background for dropdown */
+    min-width: 180px; /* Minimum width for dropdown */
+    z-index: 1000; /* Ensure dropdown appears above other content */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Shadow for dropdown */
+    border-top: 2px solid #007bff; /* A subtle accent color */
+}
+
+.main-nav .dropdown li {
+    width: 100%; /* Ensure dropdown list items take full width */
+}
+
+.main-nav .dropdown li a {
+    padding: 12px 20px; /* Adjust padding for dropdown items */
+    color: #eee; /* Lighter text for dropdown items */
+    text-align: left; /* Align text to the left within dropdown */
+}
+
+.main-nav .dropdown li a:hover {
+    background-color: #007bff; /* Accent color on hover for dropdown items */
+    color: white;
+}
+
+/* Show dropdown on hover */
+.main-nav ul li:hover > .dropdown {
+    display: block; /* Show the dropdown when parent li is hovered */
+}
+
+/* Placeholder for page content */
+.content-placeholder {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
