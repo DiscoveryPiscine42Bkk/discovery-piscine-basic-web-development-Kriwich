@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e9ecef; /* Light gray background for the page */
+    display: flex;
+    justify-content: center; /* Center the card horizontally */
+    align-items: center; /* Center the card vertically */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for card effect */
+    padding: 30px;
+    width: 300px; /* Fixed width for the card */
+    text-align: center; /* Center align content within the card */
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+.card-title {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+/* Styling for the invisible table */
+.info-table {
+    width: 100%; /* Make table fill card width */
+    border-collapse: collapse; /* Remove space between cells */
+    margin-bottom: 25px;
+}
+
+.info-table td {
+    border: none; /* Make table borders invisible */
+    padding: 0; /* Remove default cell padding */
+    text-align: center; /* Center content within table cells */
+    vertical-align: top; /* Align content to the top if needed */
+}
+
+.profile-pic-container {
+    padding-bottom: 20px; /* Space below the picture */
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border: 3px solid #007bff; /* A nice border around the profile picture */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-login {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.user-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.social-links {
+    display: flex; /* Arrange social icons horizontally */
+    justify-content: center; /* Center social icons */
+    gap: 15px; /* Space between icons */
+    margin-bottom: 30px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px; /* Slightly rounded corners for icons */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.social-icon:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.contact-button {
+    background-color: #007bff; /* Blue button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+.contact-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
