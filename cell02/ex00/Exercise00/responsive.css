@@ -1,0 +1,65 @@
+/* Essential for full page coverage and proper sizing */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* ทำให้ html และ body สูงเต็มหน้าจอเบราว์เซอร์ */
+    box-sizing: border-box; /* รวม padding/border เข้าไปในขนาดองค์ประกอบ */
+    font-family: sans-serif;
+    overflow: hidden; /* ป้องกัน scrollbar ที่ไม่จำเป็น เพื่อให้แสดงผลเต็มพื้นที่ */
+}
+
+body {
+    display: flex;
+    justify-content: center; /* จัดตารางให้อยู่กึ่งกลางแนวนอน */
+    align-items: center; /* จัดตารางให้อยู่กึ่งกลางแนวตั้ง */
+    background-color: #f0f0f0; /* พื้นหลังสีเทาอ่อน เพื่อให้เห็นความแตกต่าง */
+}
+
+table {
+    border-collapse: collapse; /* ลบช่องว่างระหว่างเซลล์ตาราง */
+    width: 100vw; /* ทำให้ตารางกว้างเต็ม 100% ของความกว้างหน้าจอ (viewport) */
+    height: 100vh; /* ทำให้ตารางสูงเต็ม 100% ของความสูงหน้าจอ (viewport) */
+}
+
+tr {
+    height: 100%; /* ทำให้แถวสูงเต็มความสูงของตาราง */
+}
+
+td {
+    padding: 20px; /* กำหนดระยะห่างภายในเซลล์ */
+    text-align: center;
+    font-size: 2em; /* ขนาดตัวอักษรใหญ่ขึ้น */
+    font-weight: bold;
+    border: 1px solid #ccc; /* เพิ่มเส้นขอบให้เซลล์ */
+    width: 50%; /* ทำให้แต่ละเซลล์กินพื้นที่ครึ่งหนึ่งของความกว้างตาราง */
+    box-sizing: border-box; /* สำคัญมาก เพื่อให้ padding/border ไม่ไปเพิ่มความกว้างของเซลล์ */
+    /* จัดข้อความให้อยู่กึ่งกลางทั้งแนวตั้งและแนวนอนภายในเซลล์ */
+    display: table-cell; /* คงพฤติกรรมแบบ table-cell */
+    vertical-align: middle;
+    white-space: nowrap; /* ป้องกันข้อความขึ้นบรรทัดใหม่เร็วเกินไป */
+    overflow: hidden; /* ซ่อนส่วนที่ล้นออกมาหากข้อความยาวเกินไป */
+    text-overflow: ellipsis; /* ใส่จุดไข่ปลา (...) หากข้อความถูกตัด */
+}
+
+/* กำหนดสีเฉพาะสำหรับแต่ละเซลล์ (คัดลอกจาก Exercise 05) */
+td:first-child { /* กำหนดสไตล์สำหรับ <td> ตัวแรกในแถว */
+    background-color: lightgreen;
+    color: #333;
+}
+td:last-child { /* กำหนดสไตล์สำหรับ <td> ตัวสุดท้ายในแถว */
+    background-color: lightcoral;
+    color: #333;
+}
+
+/* ปรับขนาดตัวอักษรบนหน้าจอที่เล็กลง เพื่อให้อ่านง่ายขึ้น (สำหรับ Responsive) */
+@media (max-width: 600px) {
+    td {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+}
+@media (max-width: 400px) {
+    td {
+        font-size: 0.9em;
+    }
+}
