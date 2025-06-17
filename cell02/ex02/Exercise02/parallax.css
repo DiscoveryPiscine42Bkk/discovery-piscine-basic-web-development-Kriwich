@@ -1,0 +1,74 @@
+/* Basic Resets */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Parallax Section Styling */
+.parallax-section {
+    position: relative;
+    height: 100vh; /* Make these sections fill the viewport height */
+    background-attachment: fixed; /* The magic for parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex; /* For centering text */
+    justify-content: center; /* For centering text horizontally */
+    align-items: center; /* For centering text vertically */
+    text-align: center;
+}
+
+/* Specific background images for each parallax section */
+.parallax-1 {
+    /* Image 1: A beautiful landscape */
+    background-image: url('https://images5.alphacoders.com/137/thumb-1920-1379245.jpg');
+}
+
+.parallax-2 {
+    /* Image 2: A modern city skyline */
+    background-image: url('https://images3.alphacoders.com/138/thumb-1920-1387451.jpg');
+}
+
+/* Message styling within parallax sections */
+.parallax-section .message {
+    color: white;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds readability */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background for text */
+    border-radius: 10px;
+}
+
+/* Content Sections (between parallax sections) */
+.content-section {
+    padding: 80px 20px; /* Add padding for content */
+    text-align: center;
+}
+
+.black-block {
+    background-color: black; /* Black block as per instructions */
+    color: white;
+    min-height: 300px; /* Ensure it's tall enough to scroll past */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-block {
+    background-color: white;
+    color: #333;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-section p {
+    max-width: 800px;
+    margin: 10px auto;
+}
